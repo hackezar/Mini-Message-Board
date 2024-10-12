@@ -1,0 +1,26 @@
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.messageList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.messageItem {
+    border: 1px solid black;
+}
+
+.expanded {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+}
