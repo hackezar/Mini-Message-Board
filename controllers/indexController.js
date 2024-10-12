@@ -42,15 +42,14 @@ const postForm = asyncHandler(async (req, res) => {
 });
 
 const getMessage = asyncHandler(async (req, res) => {
-    try{
-    const messageCopy = messages.filter(function(message){
-        return message.id == req.params.messageId;
+    if (isNaN(req.params.messageId))
+        return;
+    else {
+    const filterMessages = messages.filter((message) => {
+        return message.id == req.params.messageId
     })
-    const displayMessage = messageCopy[0];
-    res.render("expandedMessage", { displayMessage: displayMessage});
-    } catch(error){
-        console.error(error);
+    res.render("expandedMessage", {message: filterMessages[0]});
     }
-})
+});
 
 module.exports = { getHomepage, getNewMessageForm, postForm, getMessage }
