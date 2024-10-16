@@ -1,6 +1,8 @@
 
 <li class="messageItem">
     <p>Name: <%= message.user %></p>
+    <p>Email: <%= message.email %></p>
+    <p>Age: <%= message.age %></p>
     <p>Message: <%= message.text %></p>
     <p>Time: <%= message.added %></p>
     <button type="button"><a id="openMessage" href="/message/<%= message.id %>">Open</a></button>

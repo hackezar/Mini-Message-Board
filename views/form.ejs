@@ -1,9 +1,14 @@
 <html>
-    <body>
-        <form method="POST" action="/new">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body class="formBody">
+        <form method="POST" action="/new" class="form">
             <label for="authorName">User Name <input name="authorName" type="text"/></label>
+            <label for="email">Email <input name="email" type="email" /></label>
+            <label for="age">Age <input name="age" type="number" min="1" max="120" /></label>
             <label for="userText">Enter message <textarea name="userText" type="text"></textarea></label>
-            <button type="submit">Submit</button>
+            <button class="formSubmitBtn" type="submit">Submit</button>
         </form>
     </body>
 </html>>

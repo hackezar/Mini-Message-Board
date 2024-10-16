@@ -36,8 +36,10 @@ const getNewMessageForm = asyncHandler(async (req, res) => {
 const postForm = asyncHandler(async (req, res) => {
     const userText = req.body.userText;
     const authorName = req.body.authorName;
+    const email = req.body.email
+    const age = req.body.age
     const id = messages.length + 1;
-    messages.push({ text: userText, user: authorName, added: new Date(), id: id });
+    messages.push({ text: userText, user: authorName, email: email, age: age, added: new Date(), id: id });
     res.redirect("/");
 });
 

@@ -4,6 +4,26 @@
     justify-content: center;
 }
 
+.navbar {
+    display: flex;
+    border-bottom: 1px solid black;
+    width: 100vw;
+}
+
+.newMsgLink{
+    text-decoration: none;
+    display: flex;
+    width: 100vw;
+    margin-right: 2rem;
+    color: black;
+    font-size: 1.1rem;
+    justify-content: end;
+}
+
+.newMsgLink:hover {
+    color: purple;
+} 
+
 .messageList {
     display: flex;
     flex-flow: row wrap;
@@ -23,4 +43,24 @@
     align-items: center;
     border: 1px solid black;
     padding: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formBody {
+    width: 100vw;
+    height: 100vh;
+}
+
+.formSubmitBtn {
+    width: 10rem;
+    background-color:lightblue;
+    border: 1px solid black;
+    border-radius: 2rem;
 }
