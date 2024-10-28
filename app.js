@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
+console.log("App Run");
 
 app.use("/", indexRoutes);
 app.use("/new", indexRoutes);
