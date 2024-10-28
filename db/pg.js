@@ -13,8 +13,8 @@ const client = new Client({
 })
 client.connect()
 .then(() => console.log("connected to pg"))
-.catch(() => {
-    console.log('cant connect to pg')
+.catch((e) => {
+    console.log(`cant connect to pg: ${e}`)
 })
 
 module.exports={client};
