@@ -4,7 +4,8 @@ const db = require("../db/queries");
 
 const getMessageBoard = asyncHandler(async (req, res) => {
     //const messages = await db.getMessages();
-    console.log('homepage');
+    const data = db.getMessages();
+    console.log('data');
     res.render("homepage");
 });
 
