@@ -5,7 +5,7 @@ const indexController = require('../controllers/indexController');
 const router = express.Router();
 
 try {
-router.get('/', indexController.getHomepage)
+router.get('/', indexController.getMessageBoard)
 } catch(error) {
     console.error(error);
 }

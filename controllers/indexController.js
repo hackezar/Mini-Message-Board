@@ -1,32 +1,11 @@
 const asyncHandler = require("express-async-handler");
+const db = require("../db/queries");
 
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date(),
-      id: 1
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date(),
-      id: 2
-    },
-    {
-        text: "Yerrrr",
-        user: 'Bob',
-        added: new Date(),
-        id: 3
-    }
-  ];
 
-const getHomepage = asyncHandler(async (req, res) => {
-    try {
-   res.render("homepage", { title: "Mini Messageboard", messages: messages});
-    } catch(err){
-        console.error(err);
-    }
+const getMessageBoard = asyncHandler(async (req, res) => {
+    const messages = await db.getMessages();
+    console.log(messages);
+    res.render("homepage");
 });
 
 const getNewMessageForm = asyncHandler(async (req, res) => {
@@ -54,4 +33,4 @@ const getMessage = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { getHomepage, getNewMessageForm, postForm, getMessage }
+module.exports = { getMessageBoard, getNewMessageForm, postForm, getMessage }
